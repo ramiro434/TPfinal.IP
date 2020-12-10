@@ -422,7 +422,7 @@ function mostrarPalabrasOrdenadas ($coleccionPalabras){
 //$i INT
 //$palabrasOrdenadas ARRAY
 $palabrasOrdenadas = $coleccionPalabras;
-sort($palabrasOrdenadas);// sort para ordenar el arreglo
+rsort($palabrasOrdenadas);// sort para ordenar el arreglo
 echo "\n Palabras Ordenadas por Orden Alfabetico\n";
 print_r($palabrasOrdenadas); //print_r nos muestra los elementos del arreglo
 
