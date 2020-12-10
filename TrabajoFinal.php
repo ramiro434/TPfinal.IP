@@ -6,6 +6,7 @@ Balmaceda Ramiro - FAI-2508
 Urrutia Franco   - FAI-3111
 **************/
 // links de los repositorios GIT
+// https://github.com/ramiro434/TPfinal.IP.git
 /**
 * genera un arreglo de palabras para jugar
 * @return array
@@ -36,10 +37,10 @@ function cargarJuegos(){
         $coleccionJuegos[1] = array("puntos"=> 10,"indicePalabra" => 2);
         $coleccionJuegos[2] = array("puntos"=> 0, "indicePalabra" => 1);
         $coleccionJuegos[3] = array("puntos"=> 8, "indicePalabra" => 0);
-        $coleccionJuegos[4] = array("puntos"=> 9, "indicePalbra" => 3 );
+        $coleccionJuegos[4] = array("puntos"=> 9, "indicePalabra" => 3 );
         $coleccionJuegos[5] = array("puntos"=> 12, "indicePalabra" => 6);
-        $coleccionJuegos[6] = array("puntos"=> 11, "indicePalbra" => 5 );
-        $coleccionJuegos[7] = array("puntos"=> 0, "indicePalbra" => 7 );
+        $coleccionJuegos[6] = array("puntos"=> 11, "indicePalabra" => 5 );
+        $coleccionJuegos[7] = array("puntos"=> 0, "indicePalabra" => 7 );
  
 return $coleccionJuegos;
 }
@@ -345,8 +346,10 @@ return $coleccionJuegos;
 function mostrarPalabra($coleccionPalabras,$indicePalabra){
     //$coleccionPalabras[0]= array("palabra"=> "papa" , "pista" => "se cultiva bajo tierra", "puntosPalabra"=>7);
     
-    print_r ($coleccionPalabras[$indicePalabra]) ;
-    
+    echo "La palabra es:" . $coleccionPalabras[$indicePalabra]["palabra"]."\n";
+    echo "La pista es:" . $coleccionPalabras[$indicePalabra]["pista"]."\n";
+    echo "Puntaje:" . $coleccionPalabras[$indicePalabra]["puntosPalabra"]."\n";
+     
 }
 
 
@@ -498,7 +501,7 @@ $min=0;
 $maximo=count($coleccionPalabrasPrincipal)-1;
 $indiceAleatorioPrincipal=indiceAleatorioEntre($min,$maximo);
 $jugarPrincipal=jugar($coleccionPalabrasPrincipal, $indiceAleatorioPrincipal, $cantIntentos);
-$coleccionJuegosPrincipal = agregarJuego($coleccionJuegosPrincipal,$jugarPrincipal,$indiceAleatorioPrincipal);
+$coleccionJuegosPrincipal = agregarJuego($coleccionJuegosPrincipal,$Principal,$indiceAleatorioPrincipal);
 
 break;
 case 2: //Jugar con una palabra elegida
